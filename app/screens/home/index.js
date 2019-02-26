@@ -20,7 +20,7 @@ export default class HomeScreen extends Component {
             image:'https://static.chotot.com.vn/storage/marketplace/home/category/thu-cung.png',
             title:'Tìm Thú Cưng'
         }]}
-            renderItem={({item}) => (<ItemLoai image={item.image} title={item.title}/>)}
+            renderItem={({item}) => (<ItemLoai navigation = {} image={item.image} title={item.title}/>)}
         >
 
         </FlatList>
