@@ -3,6 +3,7 @@ import  RegisterScreen from '../screens/auth/register/index';
 import LoginInScreen from '../screens/auth/loginin/index';
 import IntroScreen from '../screens/intro/index';
 import HomeScreen from '../screens/home/index';
+import ProductScreen from '../screens/home/product/index';
 import {createStackNavigator,createAppContainer} from 'react-navigation';
 
 const AuthStack = createStackNavigator(
@@ -41,12 +42,14 @@ const IntroStack = createStackNavigator(
 
 const HomeStack = createStackNavigator(
     {
-        Home:{
-            screen:HomeScreen
+       
+        Product:{
+            screen:ProductScreen
         }
     },
     {
-        initialRouteKey:1,
+       initialRouteKey:1
+       ,headerMode:'none'
     }
 );
 
@@ -64,7 +67,7 @@ const RootStack = createAppContainer(createStackNavigator(
         },
     },
     {
-        initialRouteName:'IntroStack',
+        initialRouteName:'HomeStack',
         headerMode:'none'
     }
 ));

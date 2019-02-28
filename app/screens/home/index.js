@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View,StyleSheet,FlatList} from 'react-native' 
+import { Text,Button, View,StyleSheet,FlatList,ToastAndroid} from 'react-native' 
 import ItemLoai from './component/itemloai';
 import Style from '../../common/style';
 export default class HomeScreen extends Component {
   render() {
     return (
       <View style={[Style.layoutCommon]}> 
+        
         <FlatList numColumns={2} data={[
         {
             image:'https://static.chotot.com.vn/storage/marketplace/home/category/cho-tot-nha.png',
@@ -20,7 +21,7 @@ export default class HomeScreen extends Component {
             image:'https://static.chotot.com.vn/storage/marketplace/home/category/thu-cung.png',
             title:'Tìm Thú Cưng'
         }]}
-            renderItem={({item}) => (<ItemLoai navigation = {} image={item.image} title={item.title}/>)}
+            renderItem={({item}) => (<ItemLoai image={item.image} title={item.title}/>)}
         >
 
         </FlatList>
