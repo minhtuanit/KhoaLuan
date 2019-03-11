@@ -15,7 +15,7 @@ export default class ItemLoai extends Component {
             height:HP(20),
             width:WP(48)
             }}  
-            
+            onPress={() => this.props.navigation.navigate('Product')}
             >
         <Image style={{
           position:'absolute',

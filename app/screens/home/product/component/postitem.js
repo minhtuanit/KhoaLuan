@@ -3,8 +3,8 @@ import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native';
 import { Container,Item,Icon } from 'native-base';
 import {widthPercentageToDP as WP,heightPercentageToDP as HP} from 'react-native-responsive-screen';
 import Color from '../../../../common/color';
-export default class PostItem extends Component {
 
+export default class PostItem extends Component {
   render() {
     return (
      <TouchableOpacity 

@@ -2,9 +2,15 @@ import LoginScreen from '../screens/auth/login/index';
 import  RegisterScreen from '../screens/auth/register/index';
 import LoginInScreen from '../screens/auth/loginin/index';
 import IntroScreen from '../screens/intro/index';
+import {createStackNavigator,createAppContainer} from 'react-navigation';
+import TabBottom from './tabbottomnaviga';
 import HomeScreen from '../screens/home/index';
 import ProductScreen from '../screens/home/product/index';
-import {createStackNavigator,createAppContainer} from 'react-navigation';
+import ProductItemDetail from '../screens/home/product/component/componenpost/postitemdetail';
+import ProfileScreen from '../screens/profile/index';
+
+
+
 
 const AuthStack = createStackNavigator(
     {
@@ -17,7 +23,8 @@ const AuthStack = createStackNavigator(
         },
         Register:{
             screen:RegisterScreen
-        }
+        },
+        
         
     },
     {
@@ -40,20 +47,6 @@ const IntroStack = createStackNavigator(
     }
 );
 
-const HomeStack = createStackNavigator(
-    {
-       
-        Product:{
-            screen:ProductScreen
-        }
-    },
-    {
-       initialRouteKey:1
-       ,headerMode:'none'
-    }
-);
-
-
 const RootStack = createAppContainer(createStackNavigator(
     {
         IntroStack:{
@@ -62,12 +55,13 @@ const RootStack = createAppContainer(createStackNavigator(
         AuthStack:{
             screen:AuthStack,
         },
-        HomeStack:{
-            screen:HomeStack
+        TabStack:{
+            screen:TabBottom
         },
+        
     },
     {
-        initialRouteName:'HomeStack',
+        initialRouteName:'IntroStack',
         headerMode:'none'
     }
 ));
