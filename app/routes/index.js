@@ -4,13 +4,6 @@ import LoginInScreen from '../screens/auth/loginin/index';
 import IntroScreen from '../screens/intro/index';
 import {createStackNavigator,createAppContainer} from 'react-navigation';
 import TabBottom from './tabbottomnaviga';
-import HomeScreen from '../screens/home/index';
-import ProductScreen from '../screens/home/product/index';
-import ProductItemDetail from '../screens/home/product/component/componenpost/postitemdetail';
-import ProfileScreen from '../screens/profile/index';
-
-
-
 
 const AuthStack = createStackNavigator(
     {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native';
+import { View, Text,StyleSheet,TouchableOpacity,Image,ToastAndroid } from 'react-native';
 import { Container,Item,Icon } from 'native-base';
 import {widthPercentageToDP as WP,heightPercentageToDP as HP} from 'react-native-responsive-screen';
 import Color from '../../../../common/color';
@@ -18,7 +18,9 @@ export default class PostItem extends Component {
          elevation:2,
          borderRadius: 20,
          borderColor: Color.colorCommon
-         }}>
+         }}
+         onPress={() => this.props.navigation.navigate('ItemDetail')}
+         >
         <View style={{
             flex:1
             }}>

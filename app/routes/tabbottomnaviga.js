@@ -5,7 +5,7 @@ import ChatScreen from '../screens/chat/index';
 import {Icon} from 'native-base';
 import React from 'react';
 import ProductScreen from '../screens/home/product/index';
-import ProductItemDetail from '../screens/home/product/component/componenpost/postitemdetail';
+import ItemDetail from '../screens/home/product/component/componenpost/postitemdetail';
 import ProfileScreen from '../screens/profile/index';
 
 const HomeStack = createStackNavigator(
@@ -16,8 +16,8 @@ const HomeStack = createStackNavigator(
         Product:{
             screen:ProductScreen,
         },
-        ProductItemDetail:{
-            screen:ProductItemDetail,
+        ItemDetail:{
+            screen:ItemDetail,
         }
     },{
         headerMode: 'none',
@@ -40,7 +40,7 @@ const TabBottom = createBottomTabNavigator(
         Home:{
             screen:HomeStack,
             navigationOptions: {
-                tabBarLabel: 'Home',
+                tabBarLabel: 'Trang Chủ',
                 tabBarIcon: ({ tintColor }) => (
                   <Icon name="home"  />
                 )
@@ -49,21 +49,21 @@ const TabBottom = createBottomTabNavigator(
         Chat:{
             screen:ChatScreen,
             navigationOptions: {
-                tabBarLabel: 'Chat',
+                tabBarLabel: 'Đăng Bài',
                 tabBarIcon: ({ tintColor }) => (
-                  <Icon type='Entypo' name="chat"   />
+                  <Icon type='MaterialIcons' name="create"   />
                 )
             }   
         },
         Profile:{
             screen:ProfileStack,
             navigationOptions: {
-                tabBarLabel: 'Chat',
+                tabBarLabel: 'Trang cá nhân',
                 tabBarIcon: ({ tintColor }) => (
                   <Icon type='FontAwesome' name="user"   />
                 )
             } 
-        }
+        },
         
         
     },{

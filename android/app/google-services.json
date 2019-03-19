@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "602002472706",
+    "firebase_url": "https://khoaluanchatrealtime.firebaseio.com",
+    "project_id": "khoaluanchatrealtime",
+    "storage_bucket": "khoaluanchatrealtime.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602002472706:android:ad9f882b74f978bc",
+        "android_client_info": {
+          "package_name": "com.khoaluanprj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602002472706-mp4p158oh7hq9vblp0eroatqeoriusjr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khoaluanprj",
+            "certificate_hash": "fff29a3dee6ce0032433cbfe087a0aaa08b0974b"
+          }
+        },
+        {
+          "client_id": "602002472706-4269ham2it3ja8gj68gbp0fdqs73jdeg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrSrpuMKvKjCg2uuGMObRiccrw_rTj8CY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602002472706-4269ham2it3ja8gj68gbp0fdqs73jdeg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

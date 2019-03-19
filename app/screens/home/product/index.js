@@ -30,7 +30,7 @@ export default class ProductScreen extends Component {
             <View style={{flexDirection:'column'}}>
           
                     <FlatList data={[{},{},{},{},{},{},{},{},{},{},{},{}]}
-                        renderItem={({item}) => <PostItem/>  }
+                        renderItem={({item}) => <PostItem navigation={this.props.navigation} />  }
                     />
             </View>
           </ScrollView>
