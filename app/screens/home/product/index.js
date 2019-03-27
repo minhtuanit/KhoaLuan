@@ -16,8 +16,8 @@ export default class ProductScreen extends Component {
                 <View style={{backgroundColor:Color.colorCommon,borderRadius:WP(10)}}>
                     <Picker style={{paddingHorizontal:WP(20)}}>
                         <Picker.Item label="---Chọn Địa Điểm---" value="java" />
-                        <Picker.Item label="Java" value="java" />
-                        <Picker.Item label="JavaScript" value="js" />
+                        <Picker.Item label="Huế" value="hue" />
+                        <Picker.Item label="Đà Nẵng" value="Đà Nẵng" />
                     </Picker>
                 </View>
                 <Item style={{marginTop:HP(1),backgroundColor:Color.colorCommon,borderRadius:WP(10)}}>
@@ -29,7 +29,9 @@ export default class ProductScreen extends Component {
           <ScrollView>
             <View style={{flexDirection:'column'}}>
           
-                    <FlatList data={[{},{},{},{},{},{},{},{},{},{},{},{}]}
+                    <FlatList data={[{
+                  
+        },{},{},{},{},{},{},{},{},{},{},{}]}
                         renderItem={({item}) => <PostItem navigation={this.props.navigation} />  }
                     />
             </View>

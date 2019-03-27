@@ -16,24 +16,13 @@ export default class LoginScreen extends Component {
     };
   }
 
-  checklogin = (username,password) => {
-    fetch('http://192.168.1.3:3000/user/login', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-    }).then((response) => response.json())
-      .then((responseJson) => {
-         SetKey("name",responseJson.name);
-         console.log(GetKey("name").data);
-      }).catch((error) => {
-        ToastAndroid.show("Tài khoản hoặc mật khẩu sai vui lòng nhập lại",ToastAndroid.SHORT);
-      });
+  checklogin = () => {
+    fetch('')
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.log("error")
+      console.error(error);
+    });
   }
 
   render() {
@@ -94,7 +83,7 @@ export default class LoginScreen extends Component {
             borderRadius: 10,
             backgroundColor:Color.colorCommon,
             justifyContent:'center'
-            }}  onPress={() => this.props.navigation.navigate('Home')} >
+            }}   onPress={() => this.props.navigation.navigate('Home')} >
             <Text style={{color: 'white',fontSize: WP(5),textAlign:'center'}}>Đăng Nhập</Text>
           </TouchableOpacity>
         </View>
@@ -102,3 +91,5 @@ export default class LoginScreen extends Component {
     )
   }
 }
+
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,ScrollView,Image,TouchableOpacity } from 'react-native';
+import { View, Text,ScrollView,Image,TouchableOpacity,Linking } from 'react-native';
 import ImageSlider from 'react-native-image-slider';
 import {Container,Content, Icon, Textarea} from 'native-base';
 import {widthPercentageToDP as WP,heightPercentageToDP as HP} from 'react-native-responsive-screen';
@@ -7,7 +7,9 @@ import {widthPercentageToDP as WP,heightPercentageToDP as HP} from 'react-native
 export default class ItemDetail extends Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      phoneNumber:'01213312549'
+    }
   }
 
   render() {
@@ -53,7 +55,7 @@ export default class ItemDetail extends Component {
               <TouchableOpacity style={{
                 paddingHorizontal:WP(15)
                 ,borderRadius:10
-              }}>
+              }} onPress={() => Linking.openURL(`tel:${this.state.phoneNumber}`)} >
                 <Icon name='phone' type='AntDesign'/>
               </TouchableOpacity>
 
@@ -61,6 +63,7 @@ export default class ItemDetail extends Component {
                 style={{
                   paddingHorizontal:WP(15)
                 }}
+                onPress={() => this.props.navigation.navigate('Chat')}
               >
               <Icon name='chat' type='Entypo'/>
               </TouchableOpacity>
