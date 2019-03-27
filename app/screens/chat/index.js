@@ -17,7 +17,9 @@ export default class ChatScreen extends Component {
     }
   }
   openImage = () => {
-    ImagePicker.showImagePicker(options, (response) => {
+    ImagePicker.showImagePicker({
+      
+    }, (response) => {
      // console.log('Response = ', response);
      
      
@@ -49,12 +51,18 @@ export default class ChatScreen extends Component {
         flex:1,
         flexDirection:'column'
       }}>
-       <Image style={{width:100,height:300}} source={{uri:"content://media/external/images/media/355296"}} >
+       <View style={{
+         flex:1
+       }}>
+          <TouchableOpacity onPress={ this.openImage.bind(this) }>
+          
+          </TouchableOpacity>
+       </View>
+       <View style={{
+         flex:4
+       }}>
 
-       </Image>
-       <TouchableOpacity onPress={ this.openImage.bind(this) }>
-        <Text>Click me</Text>
-       </TouchableOpacity>
+       </View>
       </View>
     )
   }
